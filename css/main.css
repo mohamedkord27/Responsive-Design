@@ -1,0 +1,357 @@
+:root {
+  --min-padding: 60px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Droid Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+/* start header */
+.header {
+  background: url("/images/header.jpg") no-repeat top center;
+  min-height: 500px;
+  background-size: cover;
+  position: relative;
+}
+.header .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 168, 255, 0.5);
+}
+.header .overlay h1 {
+  font-size: 60px;
+  margin-top: 100px;
+}
+.header .overlay .plan {
+  border: 4px solid #fff;
+  padding: 20px;
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 24px;
+  float: left;
+}
+.header .overlay .order {
+  border: 4px solid #fff;
+  padding: 20px;
+  font-size: 24px;
+  margin: 30px 1% 0;
+}
+
+@media (max-width: 420px) {
+  /* custom media not found in bootstrap */
+  .header .overlay h1 {
+    margin-top: 20px !important;
+    font-size: 50px !important;
+  }
+  .header .overlay .plan {
+    float: none;
+    margin: 0 auto 20px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .header .overlay h1 {
+    margin-top: 40px !important;
+  }
+  .header .overlay .plan {
+    float: none;
+    margin: 0 auto 20px;
+    font-size: 22px;
+  }
+}
+/* end header */
+
+.features {
+  padding-top: var(--min-padding);
+  padding-bottom: var(--min-padding);
+}
+.features h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.features .boxes {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.features .boxes .feat h2 {
+  font-size: 25px;
+  margin: 10px 0 10px;
+}
+@media (max-width: 767px) {
+  .features h1 {
+    font-size: 40px;
+  }
+  .features .boxes {
+    text-align: center;
+  }
+
+  .features .boxes .feat h2 {
+    font-size: 25px;
+  }
+}
+.features .boxes .feat p {
+  line-height: 1.6;
+}
+/* start about us */
+.about-us {
+  padding-top: var(--min-padding);
+  padding-bottom: var(--min-padding);
+  background-color: #eee;
+}
+.about-us p {
+  line-height: 1.6;
+  font-size: 23px;
+}
+@media (max-width: 767px) {
+  .about-us h1 {
+    font-size: 40px;
+  }
+  .about-us p {
+    font-size: 20px;
+  }
+}
+/* end about us */
+/* start our works */
+.our-works {
+}
+.our-works .works-container {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.our-works .works-container .image img {
+  max-width: 100%;
+}
+/* end our works */
+/* start pricing */
+.pricing {
+  padding-top: var(--min-padding);
+  padding-bottom: var(--min-padding);
+  background-color: #333;
+}
+.pricing .lists {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+.pricing .lists .card {
+  border: 3px solid #fff;
+}
+.pricing .lists .card h3 {
+  font-size: 30px;
+  margin: 20px 0 10px;
+}
+.pricing .lists .card {
+  font-size: 25px;
+}
+.pricing .lists ul {
+  padding: 0;
+}
+.pricing .lists ul li {
+  padding: 8px;
+  font-size: 18px;
+}
+/* end pricing */
+/* start theSay*/
+.the-say {
+  padding-top: var(--min-padding);
+  padding-bottom: var(--min-padding);
+}
+.the-say .persons {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 15px;
+}
+.the-say .persons .say {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 10px;
+}
+.the-say .persons .say .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.the-say .persons .say .card img {
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  padding: 4px;
+  margin-right: 15px;
+}
+
+.the-say .persons .say .info p {
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  .the-say .persons {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 10px;
+  }
+  .the-say .persons .say .card {
+    flex-direction: column;
+  }
+  .the-say .persons .say .card img {
+    margin: 0;
+  }
+  .the-say .persons .say .info {
+    text-align: center;
+  }
+}
+/* end theSay*/
+/*start information*/
+.information {
+  padding-top: var(--min-padding);
+  padding-bottom: var(--min-padding);
+  background-color: #eee;
+}
+.information .sections {
+  padding: 0;
+  margin: 0;
+}
+.information .sections li {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 15px 20px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.information .sections li.selected {
+  background-color: #fff;
+  color: #1f8eb9;
+}
+.information .info-sections > div {
+  background-color: #fff;
+  padding: 20px;
+  line-height: 2;
+}
+
+.information .info-sections > div:not(:first-of-type) {
+  display: none
+}
+@media (max-width:767px) {
+  .information .sections li{
+    display: block;
+  }
+}
+/*end information*/
+/*start footer*/
+.footer{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #333;
+}
+.footer .container{
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+.footer .container .left
+.footer .container .right{
+  text-align: center;
+  padding: 20px;
+}
+@media (max-width:767px) {
+  .footer .container{
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .container .left{
+    margin-bottom: 10px;
+  }
+}
+/*end footer*/
+
+/* the mediaQuery */
+
+@media (max-width: 767px) {
+  /* Mobile & Tablet Rules */
+  .visible-xs {
+    display: block !important;
+  }
+  .hidden-xs {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Small Screen Rules */
+  .container {
+    width: 750px;
+  }
+  .visible-sm {
+    display: block !important;
+  }
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Medium Screen Rules */
+
+  .container {
+    width: 970px;
+  }
+  .visible-md {
+    display: block !important;
+  }
+  .hidden-md {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Large Screen Rules */
+
+  .container {
+    width: 1170px;
+  }
+  .visible-lg {
+    display: block !important;
+  }
+  .hidden-lg {
+    display: none;
+  }
+}
+
+/* start my framework */
+.text-center {
+  text-align: center;
+}
+.d-grid {
+  display: grid;
+}
+.f-size {
+  font-size: 50px;
+}
+.g-color {
+  color: #777;
+}
+.h-color {
+  color: #555;
+}
+.w-color {
+  color: #fff;
+}
+.container {
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.clearfix {
+  clear: both;
+}
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+  display: none;
+}
+
+/* end my framework */
